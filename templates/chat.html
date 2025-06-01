@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeuroBuddy Chat</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      background-image: url('data:image/jpeg;base64,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');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+    .bg-glass {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      margin: 3rem;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen text-gray-900 font-sans">
+  <div class="bg-glass max-w-2xl w-full animate__animated animate__fadeIn">
+    <h2 class="text-2xl font-bold mb-4 text-center"><i class="fas fa-robot text-blue-500 mr-2"></i>NeuroBuddy Chat</h2>
+
+    <form method="POST" action="/chat">
+      <div class="mb-4">
+        <label for="prompt" class="block text-lg font-medium mb-2">Ask something:</label>
+        <input id="prompt" name="prompt" type="text" class="w-full border border-gray-300 rounded p-2" placeholder="What's on your mind?" required />
+      </div>
+      <div class="text-center">
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          <i class="fas fa-paper-plane mr-1"></i>Send
+        </button>
+      </div>
+    </form>
+
+    {% if response %}
+    <div class="mt-6">
+      <h3 class="text-lg font-semibold mb-2">NeuroBuddy says:</h3>
+      <p class="bg-gray-100 p-4 rounded min-h-[80px]">{{ response }}</p>
+    </div>
+    {% endif %}
+
+    <div class="mt-6 text-center">
+      <a href="/" class="text-blue-600 hover:underline"><i class="fas fa-home mr-1"></i>Back to Home</a>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+
+</body>
+</html>
