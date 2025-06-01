@@ -1,0 +1,35 @@
+<!-- templates/index.html -->
+{% extends "layout.html" %}
+{% block title %}Home - NeuroBuddy{% endblock %}
+
+{% block content %}
+<div class="relative min-h-screen flex flex-col justify-center items-center bg-cover bg-center">
+  <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-60"></div>
+
+  <div class="relative z-10 text-center text-white animate__animated animate__fadeInDown">
+    <h2 class="text-4xl font-bold mb-4">Welcome to <span class="text-yellow-300">NeuroBuddy</span></h2>
+    <p class="text-lg mb-8">Your AI companion for simplifying everyday tasks.</p>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/simplify" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition transform hover:scale-105"><i class="fas fa-tasks mr-2"></i>Simplify Task</a>
+      <a href="/notes" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-md transition transform hover:scale-105"><i class="fas fa-sticky-note mr-2"></i>Smart Notes</a>
+      <a href="/chat" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-md transition transform hover:scale-105"><i class="fas fa-comments mr-2"></i>AI Chat</a>
+      <a href="/code" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg shadow-md transition transform hover:scale-105"><i class="fas fa-code mr-2"></i>Code Explainer</a>
+      <a href="/story" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md transition transform hover:scale-105"><i class="fas fa-book-open mr-2"></i>Story Starter</a>
+      <a href="/journal" class="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md transition transform hover:scale-105"><i class="fas fa-pen-alt mr-2"></i>Journal Entries</a>
+    </div>
+  </div>
+</div>
+
+<section class="max-w-4xl mx-auto my-12 p-8 bg-white rounded-lg shadow-lg animate__animated animate__fadeInUp">
+  <h3 class="text-2xl font-semibold mb-4 text-center">Features Overview</h3>
+  <ul class="list-disc list-inside space-y-3 text-gray-700">
+    <li><strong>Simplify Task:</strong> Break down complex tasks into manageable steps.</li>
+    <li><strong>Smart Notes:</strong> Intelligent note-taking with summarization.</li>
+    <li><strong>AI Chat:</strong> Engage in conversations with our AI assistant.</li>
+    <li><strong>Code Explainer:</strong> Understand code with line-by-line explanations.</li>
+    <li><strong>Story Starter:</strong> Generate creative story prompts.</li>
+    <li><strong>Journal Entries:</strong> Maintain and reflect on your daily journals.</li>
+  </ul>
+</section>
+{% endblock %}

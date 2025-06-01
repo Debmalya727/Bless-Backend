@@ -1,0 +1,82 @@
+/* General container */
+.bg-glass {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  margin: 50px;
+  box-sizing: border-box;
+  overflow: auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+/* Headings */
+h2 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1.5rem; /* mb-6 */
+  text-align: center;
+  color: #7e22ce; /* text-purple-700 */
+}
+
+h3 {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+/* Textarea input */
+#taskInput {
+  width: 100%;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.5rem; /* rounded */
+  padding: 0.75rem; /* p-3 */
+  resize: vertical;
+  outline: none;
+}
+
+#taskInput:focus {
+  border-color: #a855f7; /* focus:ring-purple-400 */
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.5); /* custom focus ring */
+}
+
+/* Simplify Button */
+button.simplify-btn {
+  background-color: #9333ea; /* bg-purple-600 */
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+button.simplify-btn:hover {
+  background-color: #7e22ce; /* hover:bg-purple-700 */
+}
+
+/* Output area */
+#output {
+  background-color: #f3f4f6; /* bg-gray-100 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-height: 80px;
+  font-style: italic;
+  color: #374151; /* text-gray-700 */
+}
+
+/* Back link */
+a.back-link {
+  color: #2563eb; /* text-blue-600 */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
+}
