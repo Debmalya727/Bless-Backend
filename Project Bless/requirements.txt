@@ -1,9 +1,0 @@
-Flask
-requests
-python-dotenv
-mysql-connector-python
-google-generativeai
-transformers
-torch              # required by transformers
-web3
-gunicorn
